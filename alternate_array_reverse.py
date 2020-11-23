@@ -1,4 +1,6 @@
 # alternate way to reverse the array (actually it's a list) without numpy
+# credit also goes to xable0162 for helping me figure out things like changing array_list.append(array_list(i)) to append(array_list[i])
+# thanks man, we pulled it off
 
 # function for reversing
 def reverse_list_array(array_list): # array_list param to keep from initializing variable
