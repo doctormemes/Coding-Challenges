@@ -1,13 +1,13 @@
-# alternate way to reverse the array (actually it's a list) without numpy
-# credit also goes to xable0162 for helping me figure out things like changing array_list.append(array_list(i)) to append(array_list[i])
-# thanks man, we pulled it off
+# my alternate, no numpy solution for list reversing
 
-# function for reversing
-def reverse_list_array(array_list): # array_list param to keep from initializing variable
-    for i in range(len(array_list)-1): # loop through the range of array_list's length (-1 because len starts at 1)
-        array_list.append(array_list[i]) # finds value located at i's position in the list and inserts it at the end of the list
-        array_list.pop(i) # pops (removes) item at the index location of i, preventing duplicates
-    return array_list # return list
+# reverse function start
+def reverse_list_array(a_list, **kwargs):
+    kwargs = {"TheList":a_list[::-1]} # use dictionary to store a_list values
+    if len(a_list) != 0: # if a_list length isn't zero, clear the list.
+        a_list.clear()
+    for val in kwargs.values(): # iterate through kwargs values
+        a_list.append(val) # append val to a_list while doing so
+    return a_list
 
 this_is_a_list_array = ["H", "e", "l", "l", "o", "!"]
 
