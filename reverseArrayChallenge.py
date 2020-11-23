@@ -16,9 +16,10 @@ def string_to_array_to_reversed_array():
     def reverse_array(array_arg): # array_arg takes in the return from user_input_function
         return np.flipud(array_arg) # FLIPS THE ARRAY, DOESN'T REVERSE IT. YOU SEE THE .flipud part right?. NOTHING WAS SAID ABOUT FLIPPING. ONLY REVERSING.
 
-    # decided to just use a variable here to store the results for printing
-    result = reverse_array(user_input_function(input("Please type in a single word as a string: ")))
-    print(result) # RESULTS ARE IN!
+    # x assigned to take in final return value and store it for printing
+    x = reverse_array(user_input_function(input("Please type in a single word as a string: "))) # get user input
+    return x # RESULTS ARE IN!
 
 # call string_to_array_to_reversed_array function and make shit happen
-string_to_array_to_reversed_array()
+reversed_array = string_to_array_to_reversed_array()
+print(reversed_array)
